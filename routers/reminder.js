@@ -57,4 +57,9 @@ router.get('/', auth, async (req, res) => {
     }
 })
 
+router.get('/count', auth, async (req, res) => {
+    const total = await Reminder.countDocuments();
+    res.send({ total });
+})
+
 module.exports = router;
