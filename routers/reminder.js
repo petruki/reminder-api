@@ -58,7 +58,7 @@ router.get('/', auth, async (req, res) => {
 })
 
 router.get('/count', auth, async (req, res) => {
-    const total = await Reminder.countDocuments();
+    const total = await Reminder.find({ createdBy: req.user._id }).countDocuments();
     res.send({ total });
 })
 
