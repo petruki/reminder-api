@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server.js"
+    "start": "node ./src/index.js",
+    "local": "nodemon ./server.js"
   },
   "author": "Roger Floriano",
   "license": "ISC",
