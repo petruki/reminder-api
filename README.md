@@ -12,4 +12,4 @@ JWT_SECRET=[YOUR_SUPER_SECRET]
 PORT=3001
 ```
 
-3) npm start
+3) npm run local
