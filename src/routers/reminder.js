@@ -1,4 +1,5 @@
 const express = require('express');
+const { checkRemider } = require('../external/switcher-api-facade');
 const { auth } = require('../middleware/index');
 const { Reminder } = require('../models/reminder');
 
@@ -58,8 +59,9 @@ router.get('/', auth, async (req, res) => {
 })
 
 router.get('/count', auth, async (req, res) => {
+    const reminder = await checkRemider();
     const total = await Reminder.find({ createdBy: req.user._id }).countDocuments();
-    res.send({ total });
+    res.send({ total, reminder });
 })
 
 module.exports = router;

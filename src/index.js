@@ -1,4 +1,5 @@
 require('dotenv').config({ path: '.env' });
+require('./external/switcher-client');
 
 const express = require('express');
 const helmet = require('helmet');

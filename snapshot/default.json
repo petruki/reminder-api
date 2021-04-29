@@ -1,0 +1,35 @@
+{
+    "data": {
+        "domain": {
+            "name": "Switcher API",
+            "version": 1619121389004,
+            "activated": true,
+            "group": [
+                {
+                    "name": "Test Features",
+                    "activated": true,
+                    "config": [
+                        {
+                            "key": "REMINDER",
+                            "activated": true,
+                            "strategies": [
+                                {
+                                    "strategy": "VALUE_VALIDATION",
+                                    "activated": false,
+                                    "operation": "EXIST",
+                                    "values": [
+                                        "roger"
+                                    ]
+                                }
+                            ],
+                            "components": [
+                                "reminder-app",
+                                "reminder-api"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

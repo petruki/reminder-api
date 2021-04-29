@@ -16,9 +16,15 @@
     "express": "^4.17.1",
     "helmet": "^4.2.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.12"
+    "mongoose": "^5.12.6",
+    "switcher-client": "^3.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "snapshot/*"
+    ]
   }
 }
